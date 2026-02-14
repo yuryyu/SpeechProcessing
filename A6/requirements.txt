@@ -1,0 +1,14 @@
+# A6 Voice Assistant Requirements
+# Cross-platform Google Cloud Speech and Audio Processing
+
+# Google Cloud APIs
+google-cloud-texttospeech>=0.10.0
+google-cloud-speech>=2.14.0
+
+# Audio Processing
+sounddevice>=0.4.4
+scipy>=1.5.0
+soundfile>=0.10.3
+
+# Python version: 3.7+
+# Supported platforms: Windows, macOS (Darwin), Linux
