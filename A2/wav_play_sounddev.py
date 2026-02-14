@@ -1,5 +1,12 @@
+import sys
+import platform
 import sounddevice as sd
 import soundfile as sf
+
+# Platform detection
+PLATFORM = sys.platform
+OS_NAME = platform.system()
+print(f"Running on: {OS_NAME} ({PLATFORM})")
 
 filename = 'output_one.wav'
 AMP = 2  # Amplify data - increase Volume of sound

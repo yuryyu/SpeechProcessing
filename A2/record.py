@@ -1,5 +1,12 @@
+import sys
+import platform
 import sounddevice as sd
 from scipy.io.wavfile import write
+
+# Platform detection
+PLATFORM = sys.platform
+OS_NAME = platform.system()
+print(f"Running on: {OS_NAME} ({PLATFORM})")
 
 
 file_name = "output_ee.wav"

@@ -1,8 +1,22 @@
-# before running install the next python modules: simpleaudio,matplotlib 
-# pip install simpleaudio matplotlib
+# Cross-platform audio playback with conditional imports
+# Supported platforms: Windows, macOS, Linux
 
+import sys
+import platform
 import numpy as np
-import simpleaudio as sa
+
+# Platform detection
+PLATFORM = sys.platform
+OS_NAME = platform.system()
+print(f"Running on: {OS_NAME} ({PLATFORM})")
+
+# Conditional import for audio library
+try:
+    import simpleaudio as sa
+    print("Using simpleaudio for audio playback")
+except ImportError:
+    print("Warning: simpleaudio not available. Audio playback may not work.")
+    sa = None
 
 plot_enable = True # False
 
@@ -27,9 +41,11 @@ if plot_enable:
     plt.show()
 
 # Start playback
-print('Start playback')
-play_obj = sa.play_buffer(audio, 1, 2, fs)
-
-# Wait for playback to finish before exiting
-play_obj.wait_done()
-print('Stop playback')
+if sa is not None:
+    print('Start playback')
+    play_obj = sa.play_buffer(audio, 1, 2, fs)
+    # Wait for playback to finish before exiting
+    play_obj.wait_done()
+    print('Stop playback')
+else:
+    print('Error: simpleaudio is required for audio playback')

@@ -34,8 +34,15 @@
 # ax.plot(xf, 2.0/N * np.abs(yf[:N//2]))
 # plt.show()
 
+import sys
+import platform
 import matplotlib.pyplot as plt
 import numpy as np
+
+# Platform detection
+PLATFORM = sys.platform
+OS_NAME = platform.system()
+print(f"Running on: {OS_NAME} ({PLATFORM})")
 
 
 Fs = 150.0  # sampling rate

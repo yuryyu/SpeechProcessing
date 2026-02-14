@@ -1,5 +1,13 @@
-# before running install the next python modules: sounddevice, soundfile, matplotlib 
-# pip install sounddevice soundfile matplotlib
+# Cross-platform WAV file playback
+# Supported platforms: Windows, macOS, Linux
+
+import sys
+import platform
+
+# Platform detection
+PLATFORM = sys.platform
+OS_NAME = platform.system()
+print(f"Running on: {OS_NAME} ({PLATFORM})")
 
 import sounddevice as sd
 import soundfile as sf

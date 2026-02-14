@@ -1,7 +1,14 @@
+import sys
+import platform
 import wave
 import numpy as np
 import matplotlib.pyplot as plt
 import math
+
+# Platform detection
+PLATFORM = sys.platform
+OS_NAME = platform.system()
+print(f"Running on: {OS_NAME} ({PLATFORM})")
 
 
 file_name = "output_ee.wav" #"Al_page_13_78.wav"

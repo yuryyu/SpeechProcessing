@@ -1,5 +1,13 @@
+import sys
+import platform
 import pyaudio
 import wave
+
+# Platform detection
+PLATFORM = sys.platform
+OS_NAME = platform.system()
+print(f"Running on: {OS_NAME} ({PLATFORM})")
+print(f"Audio recording using PyAudio (supported on: Windows, macOS, Linux)")
 
 chunk = 1024  # Record in chunks of 1024 samples
 sample_format = pyaudio.paInt16  # 16 bits per sample
