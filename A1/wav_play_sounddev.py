@@ -12,7 +12,7 @@ print(f"Running on: {OS_NAME} ({PLATFORM})")
 import sounddevice as sd
 import soundfile as sf
 
-filename = 'Al_page_13_78.wav'
+filename = 'A1/Al_page_13_78.wav'
 plot_enable = True
 
 AMP = 1.2  # Amplify data - increase Volume of sound
