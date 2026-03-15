@@ -22,10 +22,14 @@ All Python files include automatic platform detection and conditional imports fo
 
 ```
 SpeechProcessing/
+├── LICENSE
+├── README.md
+├── requirements.txt             # Project dependencies with version constraints
+├── test_platform_detection.py  # Platform detection validation script
 ├── A1/                          # Assignment 1 - Audio Playback & Analysis
 ├── A2/                          # Assignment 2 - Audio Recording & Visualization
-├── requirements.txt             # Project dependencies with version constraints
-└── test_platform_detection.py  # Platform detection validation script
+├── A3/                          # Assignment 3 - Praat Scripting & Formant Analysis
+└── A6/                          # Assignment 6 - Speech Recognition & Synthesis
 ```
 
 ## Python Files Description
