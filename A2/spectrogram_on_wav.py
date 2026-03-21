@@ -11,7 +11,7 @@ OS_NAME = platform.system()
 print(f"Running on: {OS_NAME} ({PLATFORM})")
 
 
-file_name = "output_ee.wav" #"Al_page_13_78.wav"
+file_name = "A1/Al_page_13_78.wav"
 
 
 def power_log(x):
@@ -21,7 +21,7 @@ def power_log(x):
 fw = wave.open(file_name,'r')
 print(fw.getparams())
 soundInfo = fw.readframes(-1)
-soundInfo = np.fromstring(soundInfo, np.int16)
+soundInfo = np.frombuffer(soundInfo, np.int16)
 f = fw.getframerate()
 fw.close()
 timeline = np.linspace(0, len(soundInfo)/f, len(soundInfo))
@@ -39,6 +39,6 @@ NFFTs=power_log((f*time_window))
 plt.specgram(soundInfo, NFFT=NFFTs,Fs=f)
 plt.ylabel('Frequency')
 plt.xlabel('time(seconds)')
-plt.savefig("spectrogram_"+file_name.split('.wav')[0]+".png")
+plt.savefig("A2/spectrogram_current_file.png")
 plt.show()
 plt.clf()
